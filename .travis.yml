@@ -5,9 +5,9 @@ rvm:
 - 1.9.3
 env:
   global:
-  - secure: JfNykzVjm2dDqShon/L5Ve7poOzSarrpuxuzDdq+/pEUYMjtWWCGo+H8w+FhYirNA6jzjMdQT1QIcearSHR8PFu30uoBBas4bnhw8eAz44aZqTP0eBLlXA2lBb2grROFrAST9VtimW/b3LcFHCKwdJKN/7RDULrS12Q8frDvMTY=
-  - secure: UDePoFU+/DerB3uLd3FLTZU25Z8Qe7fipDk7eCDVqMoice9luO+qmlzg8ksRVKtBDqtcgEVLYkpLQTBfw6WTif365FI4J01vqqHqGWwt+MqKRJL3Caowjf0RwqWOMb+f/mbYkzG2ThrpUVgYv9fy2MgRMHmWUSPyb1zNXqOwD8c=
-  - secure: Gkd9uOGShwAdx6SMAf57vguv2RC98SoI6VvTzvieJBr1eL57H32YQBA5BxSTc+q66P+D/28bTBIXpXA8uJxwobVmogPqHFcpxdRrqOp91kHkLAEYh7CgTalk+4BaYmOgeAFhcy5cqtTEMrsTXfatv6R7nR234IqA2PvhSFc041U=
+  - secure: sllJOilCyZthkFuH+8fq8VStFOho5b+sc/zD1uIC0Riq+QKNQ6Fu9Wccph+gXStdb/nxLNm5LCeQBXX0spyoVTaV7VwGpX/gnAyJ1lcFVTqZbI+lcF3Oig6Kfdi68OS3D9Zhmx2Fmm1Y6HVi2Bm99TddLSXtfqnq4Jn6qiUA9F0=
+  - secure: Z3nnq/cH6f3OkH6/iZL0JEIf832Vc4ojtUCPJq8wXtoPjN31qIwh7gHp7i5PBZupliOHrr0tEiintq5uOz1E6kPEFjApvKkxUaDeguDKfJDwp4CBxTkwsl5fwEFvUg5Qlzvpbbke3AlRR9YEWSysBhol4Z25Joi9YatSsVf3x7I=
+  - secure: GzmLl3qJLShOu3ArR/WsPJXi8eAVhfylXVXcsLc2cNy0hGPDE30i8IpfE7lhYJSnCIcnN2Tk0I7sw51a7MGeNpokqYfuApJqGo5XFdXTWXGmBxmEvBT+7DfXiHWlfC2STCo1q77jEA/RfdQa9c8k69Tf5EuGB4v1zGfJTTjI9U4=
   matrix:
   - KITCHEN_INSTANCE='default-ubuntu-1204'
   - KITCHEN_INSTANCE='default-ubuntu-1004'
