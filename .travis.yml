@@ -1,0 +1,31 @@
+language: ruby
+gemfile:
+- gemfiles/travis.gemfile
+rvm:
+- 1.9.3
+env:
+  global:
+  - secure: aBsG467lIfWi0arvi4nFrKCTeGUU754jqGMLq5moOmfZ7iMakj4sJt5vzZI1BG7PkxUZ4wBqolRzO/FG4gLOI3FRnyJyC03EM8mKqAwIGnUCBWWKZeDGu90M0LZk/lyi7vQruTV4x/ung9bPsxscBe5BbkcxaYgOjy/pVLkSDwo=
+  - secure: OSJ1Uo+Zfcmrm/F5JGtnfIhGf8IFjtSeJGWKH3ZxWAWK+VTJo0cqrjBWGhun7YRHCEwLKU0m+ZtpBPd+PYvbVfrfoJ9ZWZh8k1fw5ocT25d0+Rux81HZ4KeA1vFCKE7XUIGHeZlvXdv9UCwthx6qme/oLP76uw/9mBZ1oSESPdA=
+  - secure: fou8IgH7Le3Pe7unEu7aiW0tW/FHVPeEhOF1Jz8Xj7P7X8CE7Ldeu0O2a1ydiraOqsYq5mL4g61nuKWhADDu77dc3Z2xXofEv5qv6fkMRCfMsxegddPFpSI3jzYIkXVTy6sG1eRV1Es9xBTzLGJTJO1TjF4AcWNqduERaShUcIo=
+  matrix:
+  - KITCHEN_INSTANCE='default-ubuntu-1204'
+  - KITCHEN_INSTANCE='default-ubuntu-1004'
+  - KITCHEN_INSTANCE='default-centos-64'
+  - KITCHEN_INSTANCE='default-centos-53'
+  - KITCHEN_INSTANCE='add-servers-ubuntu-1204'
+  - KITCHEN_INSTANCE='add-servers-ubuntu-1004'
+  - KITCHEN_INSTANCE='add-servers-centos-64'
+  - KITCHEN_INSTANCE='add-servers-centos-53'
+  - KITCHEN_INSTANCE='del-servers-ubuntu-1204'
+  - KITCHEN_INSTANCE='del-servers-ubuntu-1004'
+  - KITCHEN_INSTANCE='del-servers-centos-64'
+  - KITCHEN_INSTANCE='del-servers-centos-53'
+script:
+- bundle exec foodcritic ./ -f 'any'
+- bundle exec kitchen test $KITCHEN_INSTANCE
+after_script:
+- bundle exec kitchen destroy $KITCHEN_INSTANCE
+notifications:
+  email:
+  - abutovich@qubell.com
