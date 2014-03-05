@@ -5,6 +5,9 @@ rvm:
 - 1.9.3
 env:
   global:
+  - secure: Da7yJ9bqETuorDTpSrh9hvkf4O2HN2dfA5EdohgNmmaaGNwzzqPUzFPhgAbnLi02nCcwxNePWmfY02qu3a0sDnIxJLrqvvBCekFgeQWUjnmWukozqhBDcGIY6YktIu9hP5osn0BQJ44w7rrJW1KC6kciSj4Bf1Xy8vkvPXnpi5Q=
+  - secure: h5S4KGzNrLLHr3+64/VtdaUh5p3ZwA+iSa7OOlbG/ALhdPKBnR2nLBiEjK6cWrKIsC0NXOt/L1Kch+krAnVhRQ36b8/aCkvGOgFA1Oi5kRZtuTdYNl+0nLhcuPjsIacy9L3t4rZaY511NMC/nWRz+TsMqzvjFEDY5WgARyJs8Oo=
+  - secure: OQiOAMgUfiDRz13+5OoG6aqBdvxwfrw5ZtdWvU707S51cw9THwpJQPbwUHXVqK5nAq0gZzfxu6cD0Ba8FNXirxjv0mYXajFDUFbaLFte8Hx0FPkLJT0g6f0VcRnWgMzsCeT86roVxmRQBUPF/28AJb2SHCqKXapXUpycnFfe93g=
   matrix:
   - KITCHEN_INSTANCE='default-ubuntu-1204'
   - KITCHEN_INSTANCE='default-ubuntu-1004'
