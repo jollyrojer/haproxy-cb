@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: haproxy
-# Recipe:: add_servers
+# Recipe:: add_server 
 #
 # Copyright 2013, YOUR_COMPANY_NAME
 #
@@ -26,12 +26,10 @@ else
   ssl_cert=""
 end
 
-node['haproxy']['server'].each do |server|
-  bash "add server" do
-    cwd "/usr/local/bin"
-    code <<-EEND
-      ./addServer.sh "#{server}:#{node['haproxy']['port']}" "#{node['haproxy']['bucket']}" "#{ssl_cert}"
-      ./buildConfig.sh
-    EEND
-  end
+bash "add server" do
+  cwd "/usr/local/bin"
+  code <<-EEND
+    ./addServer.sh "#{node['haproxy']['server']}" "#{node['haproxy']['bucket']}" "#{ssl_cert}"
+    ./buildConfig.sh
+  EEND
 end
