@@ -7,11 +7,11 @@
 # All rights reserved - Do Not Redistribute
 #
 
-node['haproxy']['server'].each do |server|
+node['haproxy']['server_uri'].each do |server_uri|
   bash "del server" do
     cwd "/usr/local/bin"
     code <<-EEND
-      ./delServer.sh "#{'server'}:#{node['haproxy']['port']}" "#{node['haproxy']['bucket']}"
+      ./delServer.sh "#{server_uri}" "#{node['haproxy']['bucket']}"
       ./buildConfig.sh
     EEND
   end
