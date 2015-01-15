@@ -14,11 +14,11 @@ bash "delete servers" do
  EEND
 end
 
-node['haproxy']['server'].each do |server|
+node['haproxy']['server_uri'].each do |server_uri|
   bash "add server" do
     cwd "/usr/local/bin"
     code <<-EEND
-      ./addServer.sh "#{server}:#{node['haproxy']['port']}" "#{node['haproxy']['bucket']}"
+      ./addServer.sh "#{server_uri}" "#{node['haproxy']['bucket']}"
       ./buildConfig.sh
     EEND
   end
