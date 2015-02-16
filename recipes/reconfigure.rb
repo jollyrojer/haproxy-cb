@@ -19,7 +19,13 @@ node['haproxy']['server_uri'].each do |server_uri|
     cwd "/usr/local/bin"
     code <<-EEND
       ./addServer.sh "#{server_uri}" "#{node['haproxy']['bucket']}"
-      ./buildConfig.sh
     EEND
   end
+end
+
+bash "update config" do
+  cwd "/usr/local/bin"
+  code <<-EEND
+    ./buildConfig.sh
+ EEND
 end
